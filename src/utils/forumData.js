@@ -13,12 +13,13 @@ export const forumData = {
 			postDescription:
 				'Non programmers on my timeline. Attention! After placing 100+ programmers i in top Indian startups, I am thinking of coming up with a program for business roles as well. Interested in helping me build this course? Join me at Invact.',
 			upvotes: 350,
-			downvotes: 50,
+			downvotes: 450,
 			tags: ['mba', 'business', 'bootcamp'],
 			createdAt: '2023-06-24T12:00:00Z',
 			comments: [
 				{
 					commentId: '89898-856-87576',
+					name: 'Ashwani Khode',
 					username: 'ashwin4real',
 					picUrl: 'http://bit.ly/42Zm7tM',
 					likes: 0,
