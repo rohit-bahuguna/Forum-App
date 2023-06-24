@@ -40,11 +40,33 @@ const PostProvider = ({ children }) => {
 		// }
 	};
 
-	const sortByVotes = () => {};
+	const sortByVotes = () => {
+		const sortedPost = data.posts.sort(
+			(a, b) => parseFloat(a.upvotes) - parseFloat(b.upvotes)
+		);
+
+		setData({ ...data, posts: sortedPost });
+	};
+
+	const sortByDate = () => {
+		const sortedPost = data.posts.sort(
+			(a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+		);
+
+		setData({ ...data, posts: sortedPost });
+	};
 
 	return (
 		<PostContext.Provider
-			value={{ data, setData, updateVote, markBookmark, updateSinglePostVote }}>
+			value={{
+				data,
+				setData,
+				updateVote,
+				markBookmark,
+				updateSinglePostVote,
+				sortByDate,
+				sortByVotes
+			}}>
 			{children}
 		</PostContext.Provider>
 	);
