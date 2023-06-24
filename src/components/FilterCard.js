@@ -3,15 +3,7 @@ import { AiFillCaretUp } from 'react-icons/ai';
 import { usePostData } from '../context/dataContext';
 
 const FilterCard = () => {
-	const {
-		data,
-		setData,
-		updateVote,
-		markBookmark,
-		updateSinglePostVote,
-		sortByDate,
-		sortByVotes
-	} = usePostData();
+	const { sortByDate, sortByVotes } = usePostData();
 	return (
 		<div>
 			<h1 className="text-xl font-bold">Sort By</h1>

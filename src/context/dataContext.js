@@ -50,7 +50,7 @@ const PostProvider = ({ children }) => {
 
 	const sortByDate = () => {
 		const sortedPost = data.posts.sort(
-			(a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+			(a, b) => new Date(a.createdAt) - new Date(b.createdAt)
 		);
 
 		setData({ ...data, posts: sortedPost });
